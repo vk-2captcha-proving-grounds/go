@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
     <title>© 2026 Защищенное перенаправление трафика</title>
 
     <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWrxB8FZVbsRP4ro-7lVqQjY6vsuRBf1TbfBSz96mVNDx6Np6HqevUn6dW&s=10">
@@ -19,38 +14,15 @@
 </head>
 <body>
     <script>
-        // Получаем параметр 'id' из URL (номер ссылки в массиве)
-        const urlParams = new URLSearchParams(window.location.search);
-        const linkIndex = urlParams.get('id');
-        
-        if (linkIndex !== null) {
-            // Преобразуем в число
-            const index = parseInt(linkIndex);
-            
-            // Загружаем urls.json
+        const idx = new URLSearchParams(location.search).get('id');
+        if (idx !== null) {
             fetch('urls.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Проблемы с сетью интернет [ERROR_LF1])');
+                .then(r => r.json())
+                .then(d => {
+                    if (d[parseInt(idx)]) {
+                        location.replace(d[parseInt(idx)]);
                     }
-                    return response.json();
-                })
-                .then(data => {
-                    // Проверяем, что data - это массив и индекс существует
-                    if (Array.isArray(data) && data[index]) {
-                        window.location.replace(data[index]);
-                    } else {
-                        console.error('Проблемы с сетью интернет [ERROR_LF2]');
-                        window.location.replace('https://www.ozon.ru');
-                    }
-                })
-                .catch(error => {
-                    console.error('Ошибка:', error);
-                    window.location.replace('https://www.ozon.ru');
                 });
-        } else {
-            // Если параметр id отсутствует - на fallback
-            window.location.replace('https://www.ozon.ru');
         }
     </script>
 </body>
